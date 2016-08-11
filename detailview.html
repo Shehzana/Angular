@@ -1,0 +1,24 @@
+<div class="container-fluid" ng-init="slickInit()">
+  <div class="row">
+    <div class="detail-view-container">
+      <div class="col-xs-12">
+        <div class="property-detail-title">
+          <p>{{prop_detail_name}}</p>
+        </div>
+        <div class="property-detail-image"><img ng-src="{{prop_detail_bannerimage}}" /></div>
+        <div class="property-detail-content">
+          <p>{{prop_detail_address1}}</p>
+          <p>{{prop_detail_address2}}</p>
+          <p>{{prop_detail_town}}</p>
+          <p>{{prop_detail_county}}</p>
+          <p>{{prop_detail_location}}</p>
+          <p>{{prop_length}}</p>
+        </div>
+        <div class="slider-images" ng-hide = "prop_detail_bannerimage_gallery.length = 1">
+          <div ng-repeat="image in prop_detail_bannerimage_gallery" > <img ng-src="{{image}}"> </div>
+        </div>
+        <div class="go-back"><a href="javascript:;" ng-click="Goback()">Back to results</a></div>
+      </div>
+    </div>
+  </div>
+</div>
