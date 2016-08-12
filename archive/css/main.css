@@ -9,12 +9,3 @@
 .category-type a{color:#fff;display:block;padding:10px 0;background:#007faa}
 .category-type a.current{background:#001c33}
 .property-title{margin-bottom:10px}
-
-
-.property-detail-image,.property-detail-title,.property-detail-content,.slider-images{margin-bottom:20px}
-.property-detail-title p{font-size:2.5em;}
-.property-detail-content p{font-size:1.5em;padding-bottom:10px}
-.go-back{font-size:1.5em}
-
-
-.detail-view-container .slick-dots{bottom:0}

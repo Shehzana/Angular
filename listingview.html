@@ -1,0 +1,24 @@
+<div class="container-fluid">
+<div class="row">
+  <div class="col-xs-12">
+    <h1>Property Listing</h1>
+  </div>
+  <div class="listing-view-container">
+    <div class="category-listing col-xs-12">
+      <div class="category-type" ng-repeat="c in categorylist"><a href="javascript:;" ng-click="propertyCategoryWise(c)" ng-class="{'current' : currentcat == c.title}">{{c.title}}</a></div>
+    </div>
+    <div class="property-landing">
+      <div class="property-item col-xs-6 col-sm-3" ng-repeat="x in filteredpropItems = ( propArray | filter:searchcat | limitTo:quantity )">
+        <div class="object-list">
+          <div class="property-image"><img ng-src="{{x.prop_thumb_image}}" /></div>
+          <div class="property-title">{{x.prop_name}}</div>
+          <div class="property-cat-type">{{x.prop_cat_list}}</div>
+          <div class="property-item-detail-url"><a href="#/detail/{{x.prop_ref_id}}" title="Opens in a new window">read more about property</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <div class="property-loadmore" ng-hide="filteredpropItems.length  < quantity" ><a href="javascript:;" ng-click="propertyLoadMore()">Load more</a></div>
+    </div>
+  </div>
+</div>
